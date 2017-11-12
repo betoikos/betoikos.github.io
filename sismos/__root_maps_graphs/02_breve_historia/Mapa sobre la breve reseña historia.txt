@@ -1,0 +1,36 @@
+## Mapa sobre la breve reseña historia
+
+https://rodasmilian.shinyapps.io/mex_mag/ 
+
+## Numero de sismos a través del tiempo
+
+file:///E:/Econometria__Aplicada/PROYECT/program-R/graph_mex_nsismos.html 
+
+## Numero de sismos por municipio tomando todos los sismos
+
+file:///E:/Econometria__Aplicada/PROYECT/program-R/graph_mex_estymun_todo.html
+
+## Numero de sismos por municipio tomando los sismos mayores a 5
+
+file:///E:/Econometria__Aplicada/PROYECT/program-R/graph_mex_estymun_may5.html
+
+
+        ## los 3 utlimos links no son url libres, sino son app que se corren localmente, a menos de que se incruste el código html
+		## para ello se te pasaron los archivos html para obtener el codigo de incrustacion
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
