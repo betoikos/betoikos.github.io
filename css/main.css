@@ -41,3 +41,7 @@ ul.posts {
 ul.posts li {
     list-style: none;
 }
+
+#myName {
+    color: darkred;
+}
