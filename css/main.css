@@ -57,3 +57,8 @@ nav {
 .mainNav, .mainFoot {
     color: #fff;
 }
+
+img {
+    border-radius: 80%;
+    width: 40%;
+}
