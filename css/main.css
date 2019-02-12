@@ -59,6 +59,6 @@ nav {
 }
 
 #mainPhoto {
-   border-radius: 80%;
-    border-width: 50vw; 
+    border-radius: 5%;
+    height: 300px;
 }
