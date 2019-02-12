@@ -32,7 +32,8 @@ p {
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
-    background-color: #5E002B;
+    background-color: #7E3355;
+    text-align: center;
 }
 
 ul.posts { 
@@ -46,4 +47,13 @@ ul.posts li {
 
 #myName {
     color: #7e3355;
+}
+
+nav {
+    background-color: #7E3355;
+    text-align: center;
+}
+
+.mainNav, .mainFoot {
+    color: #fff;
 }
