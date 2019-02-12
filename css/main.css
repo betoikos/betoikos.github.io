@@ -58,7 +58,7 @@ nav {
     color: #fff;
 }
 
-img {
-    border-radius: 80%;
-    width: 40%;
+#mainPhoto {
+   border-radius: 80%;
+    border-width: 40%; 
 }
