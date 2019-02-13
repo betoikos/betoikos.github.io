@@ -49,13 +49,9 @@ ul.posts li {
     color: #7e3355;
 }
 
-nav {
-    background-color: #7E3355;
-    text-align: center;
-}
-
-.mainNav, .mainFoot {
+.mainFoot {
     color: #fff;
+    vertical-align: center;
 }
 
 #mainPhoto {
