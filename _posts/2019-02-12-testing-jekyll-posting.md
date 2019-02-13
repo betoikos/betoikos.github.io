@@ -6,6 +6,9 @@ categories: test jekyll
 ---
 This is just a post to see if I finally understood how to publish with [Jekill][jekyll-link]. 
 
+... which is shown in the screenshot below:
+![My helpful screenshot](/img/Humberto-Martinez-Garcia-profile.jpg)
+
 {% highlight ruby %}
 holi
 {% endhighlight %}
