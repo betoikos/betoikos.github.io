@@ -18,8 +18,13 @@ a {
 }
 a:hover {
     text-decoration: underline;
-    color: #3059ba;
+    color: #2F487D;
 }
+
+h1, h2, h3, h4, h5, h6 {
+    color: #333;
+}
+
 h1 {
     font-size: 3em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
@@ -40,7 +45,7 @@ p {
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
-    background-color: #3059ba;
+    background-color: #2F487D;
     text-align: center;
 }
 
@@ -54,7 +59,7 @@ ul.posts li {
 }
 
 #myName {
-    color: #3059ba;
+    color: #2F487D;
 }
 
 .mainFoot {
@@ -68,7 +73,7 @@ ul.posts li {
 }
 
 
-ul {
+#myTeaching ul {
     font-size: 1.5em;
     line-height: 1.4em;
     color: #333;
@@ -76,7 +81,7 @@ ul {
     margin-bottom: 1em;
 }
 
-li {
+#myTeaching li {
     font-size: 1.5em;       /* same as your <p> text */
     line-height: 1.4em;     /* comfortable vertical spacing */
     color: #333;            /* same text color */
