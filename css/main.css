@@ -66,3 +66,12 @@ ul.posts li {
     border-radius: 5%;
     height: 400px;
 }
+
+
+ul {
+    font-size: 1.5em;
+    line-height: 1.4em;
+    color: #333;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+}
