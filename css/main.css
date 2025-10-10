@@ -18,7 +18,7 @@ a {
 }
 a:hover {
     text-decoration: underline;
-    color: #26375F;
+    color: #3059ba;
 }
 h1 {
     font-size: 3em;
@@ -40,7 +40,7 @@ p {
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
-    background-color: #26375F;
+    background-color: #3059ba;
     text-align: center;
 }
 
@@ -54,7 +54,7 @@ ul.posts li {
 }
 
 #myName {
-    color: #26375F;
+    color: #3059ba;
 }
 
 .mainFoot {
