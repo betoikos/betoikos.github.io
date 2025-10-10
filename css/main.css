@@ -22,7 +22,7 @@ a:hover {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #333;
+    color: #2F487D;
 }
 
 h1 {
@@ -88,3 +88,5 @@ ul.posts li {
     line-height: inherit; 
     margin-bottom: 0.4em;
 }
+
+
