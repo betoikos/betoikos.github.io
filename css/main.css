@@ -73,11 +73,18 @@ ul.posts li {
 }
 
 
-
+/* Match list text to <p> size only inside #myTeaching */
+#myTeaching ul {
+    font-size: 1.5em;     /* same as p */
+    line-height: 1.4em;
+    color: #333;
+    margin-top: 0.5em;
+    margin-bottom: 1em;
+    padding-left: 1.2em;  /* optional: tighter indent */
+}
 
 #myTeaching li {
-    font-size: 1.5em;       /* same as your <p> text */
-    line-height: 1.4em;     /* comfortable vertical spacing */
-    color: #333;            /* same text color */
-    margin-bottom: 0.4em;   /* small space between items */
+    font-size: 1em;       /* inherit parent size; do NOT rescale */
+    line-height: inherit; 
+    margin-bottom: 0.4em;
 }
