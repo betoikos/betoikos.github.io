@@ -90,3 +90,119 @@ ul.posts li {
 }
 
 
+
+
+
+ /* RESEARCH SECTION */
+
+
+/* Research cards */
+.paper-card {
+    border: 1px solid #e6e6e6;
+    border-radius: 8px;
+    padding: 1.0em 1.2em;
+    margin: 1em 0 1.2em;
+    background: #fff;
+}
+
+.paper-title {
+    margin: 0 0 0.1em 0;
+    font-size: 1.4em; /* sits nicely under your h2 */
+    color: #333;      /* unified heading color */
+    font-weight: 700;
+}
+
+.paper-meta {
+    margin: 0 0 0.6em 0;
+    font-size: 0.95em;
+    color: #666;
+    font-style: italic;
+}
+
+.paper-abstract {
+    margin: 0 0 0.8em 0;
+    font-size: 1.1em;         /* slightly larger than body for readability */
+    line-height: 1.55em;
+    color: #333;
+}
+
+/* Buttons */
+.btn {
+    display: inline-block;
+    padding: 0.5em 0.9em;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: transform 0.02s ease-in-out, background 0.2s ease, border-color 0.2s ease;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.btn-download {
+    background: #3059ba;
+    color: #fff;
+    border: 1px solid #3059ba;
+}
+
+.btn-download:hover {
+    background: #1f3991;
+    border-color: #1f3991;
+    text-decoration: none;
+    transform: translateY(-1px);
+}
+
+/* Make lists on the research page read well if used inside cards */
+.paper-card ul, .paper-card li {
+    font-size: 1em;
+    line-height: 1.5em;
+    color: #333;
+}
+
+/* Responsive tweak for narrow screens */
+@media (max-width: 680px) {
+    .paper-title { font-size: 1.25em; }
+    .paper-abstract { font-size: 1.05em; }
+}
+
+
+
+/* Layout container */
+.paper-content {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 1.5em;
+    flex-wrap: wrap; /* allows wrapping for narrow screens */
+}
+
+/* Left text section */
+.paper-text {
+    flex: 1 1 60%;
+    min-width: 280px;
+}
+
+/* Right image section */
+.paper-image {
+    flex: 0 0 35%;
+    max-width: 300px;
+    text-align: right;
+}
+
+.paper-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+/* Responsive stacking for small screens */
+@media (max-width: 720px) {
+    .paper-content {
+        flex-direction: column;
+    }
+    .paper-image {
+        max-width: 100%;
+        text-align: center;
+        margin-top: 1em;
+    }
+}
+
