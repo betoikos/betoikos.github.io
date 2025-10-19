@@ -317,13 +317,13 @@ ul.posts li {
 
 
 /* University of Illinois (blue) */
-.school-illinois { --accent: #FF5F05; }
+.school-illinois { --accent: #dd781c; }
 
 /* El Colegio de México (green) */
-.school-colmex { --accent: #5E002B; }
+.school-colmex { --accent: rgba(106, 15, 44, 0.94); }
 
 /* Add more schools here */
-.school-unam     { --accent: #002B7A; }  /* example */
+.school-unam     { --accent: #203d8e; }  /* example */
 .school-uiuc-alt { --accent: #13294B; }  /* darker Illinois blue, if desired */
 
 
