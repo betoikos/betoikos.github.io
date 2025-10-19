@@ -206,3 +206,128 @@ ul.posts li {
     }
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* ========== Teaching Cards ========== */
+
+.teaching-card {
+    --accent: #3059ba;               /* default; overridden per school below */
+    border: 1px solid #e6e6e6;
+    border-left: 6px solid var(--accent);
+    border-radius: 10px;
+    padding: 1.0em 1.1em;
+    margin: 1em 0 1.2em;
+    background: #fff;
+}
+
+.tc-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "title school"
+      "role  school"
+      "terms school";
+    gap: 0.15em 1em;
+    align-items: baseline;
+    margin-bottom: 0.6em;
+}
+
+.tc-title { grid-area: title; margin: 0; font-size: 1.35em; color: #333; font-weight: 700; }
+.tc-role  { grid-area: role;  font-style: italic; color: #555; }
+.tc-terms { grid-area: terms; color: #444; }
+.tc-school{ grid-area: school; color: var(--accent); font-weight: 700; white-space: nowrap; }
+
+.tc-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5em;
+}
+
+/* Buttons (re-uses your site’s button look, but with per-school accents) */
+.btn {
+    display: inline-block;
+    padding: 0.48em 0.85em;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: transform 0.02s ease-in-out, background 0.2s ease, border-color 0.2s ease;
+    font-weight: 600;
+    line-height: 1;
+}
+
+.btn-eval {
+    background: var(--accent);
+    color: #fff;
+    border: 1px solid var(--accent);
+}
+.btn-eval:hover {
+    background: color-mix(in srgb, var(--accent) 85%, black);
+    border-color: color-mix(in srgb, var(--accent) 85%, black);
+    transform: translateY(-1px);
+    text-decoration: none;
+}
+
+/* “Ghost” style for syllabus to keep hierarchy clear */
+.btn-syllabus {
+    background: #fff;
+    color: var(--accent);
+    border: 1px solid var(--accent);
+}
+.btn-syllabus:hover {
+    background: color-mix(in srgb, var(--accent) 8%, white);
+    text-decoration: none;
+}
+
+/* Responsive: stack nicely */
+@media (max-width: 720px) {
+    .tc-header {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+          "title"
+          "school"
+          "role"
+          "terms";
+        gap: 0.15em 0;
+    }
+}
+
+
+
+
+/* University of Illinois (blue) */
+.school-illinois { --accent: #dd781c; }
+
+/* El Colegio de México (green) */
+.school-colmex { --accent: rgba(106, 15, 44, 0.94); }
+
+/* Add more schools here */
+.school-unam     { --accent: #203d8e; }  /* example */
+.school-uiuc-alt { --accent: #13294B; }  /* darker Illinois blue, if desired */
+
+
+
+
+
+
