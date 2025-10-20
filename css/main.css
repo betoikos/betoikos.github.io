@@ -336,52 +336,74 @@ ul.posts li {
 
 
 
-/* ========== Testimonials (Horizontal Flow) ========== */
-.testimonials-vertical {
-    max-width: 850px;
-    margin: 1.5em auto 2.5em;
+/* ==== Testimonials Slider ==== */
+.testimonials-slider {
+  position: relative;
+  max-width: 850px;
+  margin: 2em auto;
+  overflow: hidden;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+  padding: 2em 2.2em;
+  min-height: 180px;
 }
 
-.quote-block {
-    border-left: 6px solid var(--accent, #3059ba);
-    padding: 1em 1.5em;
-    margin-bottom: 1.5em;
-    background: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+.quote-slide {
+  display: none;
+  animation: fadeIn 0.8s ease-in-out;
+}
+
+.quote-slide.active {
+  display: block;
 }
 
 .quote-text {
-    font-style: italic;
-    font-size: 1.2em;
-    color: #333;
-    line-height: 1.6em;
-    margin-bottom: 0.5em;
+  font-style: italic;
+  font-size: 1.2em;
+  color: #333;
+  line-height: 1.6em;
+  margin-bottom: 0.6em;
 }
 
 .quote-meta {
-    font-size: 1em;
-    font-weight: 500;
-    color: #555;
-    text-align: right;
+  font-size: 0.95em;
+  color: #555;
+  text-align: right;
 }
 
-/* Add thin divider line between blocks (optional) */
-.quote-block:not(:last-child)::after {
-    content: "";
-    display: block;
-    border-bottom: 1px solid #eee;
-    margin-top: 1em;
+/* Nav buttons */
+.quote-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(48,89,186,0.9);
+  color: #fff;
+  border: none;
+  font-size: 1.6em;
+  padding: 0.2em 0.5em;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-@media (max-width: 600px) {
-    .quote-text {
-        font-size: 1.05em;
-        line-height: 1.5em;
-    }
-    .testimonials-vertical {
-        padding: 0 0.5em;
-    }
+.quote-nav:hover {
+  background: #1f3991;
 }
 
+.quote-nav.prev { left: 10px; }
+.quote-nav.next { right: 10px; }
+
+/* Fade animation */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+
+/* Optional: colored accent bar on left */
+.quote-slide {
+  border-left: 6px solid var(--accent, #3059ba);
+  padding-left: 1.2em;
+}
 

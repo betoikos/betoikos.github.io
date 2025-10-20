@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+	<html>
+		<head>
+			<!-- Google tag (gtag.js) -->
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-N94NCBMVFR"></script>
+			<script>
+			  window.dataLayer = window.dataLayer || [];
+			  function gtag(){dataLayer.push(arguments);}
+			  gtag('js', new Date());
+
+			  gtag('config', 'G-N94NCBMVFR');
+			</script>
+			<title>{{ page.title }}</title>
+			<!-- link to main stylesheet -->
+			<link rel="stylesheet" type="text/css" href="/css/main.css">
+			
+			<script>
+			document.addEventListener("DOMContentLoaded", function() {
+			  const slides = document.querySelectorAll(".quote-slide");
+			  const prevBtn = document.querySelector(".quote-nav.prev");
+			  const nextBtn = document.querySelector(".quote-nav.next");
+
+			  if (!slides.length) return;
+
+			  // start at a random quote
+			  let current = Math.floor(Math.random() * slides.length);
+			  slides[current].classList.add("active");
+
+			  function showSlide(index) {
+				slides.forEach(s => s.classList.remove("active"));
+				slides[index].classList.add("active");
+			  }
+
+			  function nextSlide() {
+				current = (current + 1) % slides.length;
+				showSlide(current);
+			  }
+
+			  function prevSlide() {
+				current = (current - 1 + slides.length) % slides.length;
+				showSlide(current);
+			  }
+
+			  nextBtn.addEventListener("click", nextSlide);
+			  prevBtn.addEventListener("click", prevSlide);
+
+			  // auto-rotate every 7 seconds
+			  let timer = setInterval(nextSlide, 7000);
+
+			  // pause on hover
+			  const slider = document.querySelector(".testimonials-slider");
+			  slider.addEventListener("mouseenter", () => clearInterval(timer));
+			  slider.addEventListener("mouseleave", () => timer = setInterval(nextSlide, 7000));
+			});
+			</script>
+			
+		</head>
+		<body>
+			<nav>
+	    		<ul >
+	        		<li><a href="/" class="mainNav">About</a></li>
+					<li><a href="/research" class="mainNav">Research</a></li>
+					<li><a href="/teaching" class="mainNav">Teaching</a></li>
+		        	<!--<li><a href="/about" class="mainNav">About</a></li>
+	        		<li><a href="/cv" class="mainNav">CV</a></li>
+	        		<li><a href="/blog" class="mainNav">Blog</a></li> -->
+                    
+	    		</ul>
+			</nav>
+			<div class="container">
+			
+			{{ content }}
+			
+			</div><!-- /.container -->
+			<footer>
+	    		<ul>
+	        		<li><a href="" class="mainFoot">hm18[at]illinois[dot]edu</a></li>
+	        		<li><a href="http://humbertomg.com" class="mainFoot">Home</a></li>
+				</ul>
+			</footer>
+		</body>
+	</html>
