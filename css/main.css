@@ -334,18 +334,16 @@ ul.posts li {
 
 
 
-
-/* ==== Testimonials Slider (Compact Layout) ==== */
+/* ==== Testimonials Slider (Refined Version) ==== */
 .testimonials-slider {
   position: relative;
-  max-width: 850px;
-  margin: 1.5em auto 2em;
+  max-width: 95%;
+  margin: 1.5em auto;
   overflow: hidden;
   background: #fff;
   border-radius: 10px;
   box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 1.2em 2em;
-  min-height: auto; /* remove fixed height */
+  padding: 1.2em 2.5em;
 }
 
 .quote-slide {
@@ -357,75 +355,80 @@ ul.posts li {
   display: block;
 }
 
-.quote-slide {
-  border-left: 5px solid var(--accent, #3059ba);
-  padding-left: 1.2em;
-  margin: 0;
-}
-
-/* Quote text + inline course info */
 .quote-text {
   font-style: italic;
   font-size: 1.15em;
   color: #333;
   line-height: 1.55em;
-  display: inline;
+  margin: 0;
+  text-align: justify;
 }
 
 .quote-meta {
-  display: inline;
+  font-style: normal;
   font-size: 0.95em;
   color: #555;
   font-weight: 500;
-  margin-left: 0.6em;
+  margin-left: 0.5em;
 }
 
-/* Remove extra white space inside slider */
-.testimonials-slider p {
-  margin: 0;
-}
-
-/* === Larger, side-spanning rectangular nav zones === */
+/* Nav arrows outside the text block */
 .quote-nav {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 80px; /* wider clickable zone */
-  background: rgba(48,89,186,0.07);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 50px;
+  height: 50px;
+  background: rgba(48,89,186,0.1);
   color: #3059ba;
   border: none;
-  font-size: 2em;
+  font-size: 1.8em;
   cursor: pointer;
-  transition: background 0.2s ease, color 0.2s;
+  border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-  z-index: 5;
+  transition: all 0.2s ease;
 }
 
 .quote-nav:hover {
-  background: rgba(48,89,186,0.15);
-  color: #1f3991;
+  background: rgba(48,89,186,0.2);
 }
 
-.quote-nav.prev { left: 0; border-radius: 10px 0 0 10px; }
-.quote-nav.next { right: 0; border-radius: 0 10px 10px 0; }
+.quote-nav.prev { left: -60px; }   /* moved outward */
+.quote-nav.next { right: -60px; }  /* moved outward */
 
-/* Adjust fade animation */
+/* Dots for navigation */
+.quote-dots {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.quote-dots button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #3059ba;
+  background: #fff;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.quote-dots button.active {
+  background: #3059ba;
+}
+
 @keyframes fadeIn {
-  from { opacity: 0; transform: translateY(3px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from { opacity: 0; transform: translateY(4px); }
+  to { opacity: 1; transform: translateY(0); }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .testimonials-slider {
-    padding: 1em 1.4em;
+    padding: 1em 1.5em;
   }
-  .quote-text {
-    font-size: 1.05em;
-  }
-  .quote-nav {
-    width: 50px;
-    font-size: 1.6em;
-  }
+  .quote-nav.prev { left: -40px; }
+  .quote-nav.next { right: -40px; }
+  .quote-text { font-size: 1.05em; }
 }

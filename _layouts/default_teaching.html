@@ -14,45 +14,59 @@
 			<!-- link to main stylesheet -->
 			<link rel="stylesheet" type="text/css" href="/css/main.css">
 			
-			<script>
-			document.addEventListener("DOMContentLoaded", function() {
-			  const slides = document.querySelectorAll(".quote-slide");
-			  const prevBtn = document.querySelector(".quote-nav.prev");
-			  const nextBtn = document.querySelector(".quote-nav.next");
+				<script>
+				document.addEventListener("DOMContentLoaded", function() {
+				  const slides = document.querySelectorAll(".quote-slide");
+				  const prevBtn = document.querySelector(".quote-nav.prev");
+				  const nextBtn = document.querySelector(".quote-nav.next");
+				  const dotsContainer = document.querySelector(".quote-dots");
 
-			  if (!slides.length) return;
+				  if (!slides.length) return;
 
-			  // start at a random quote
-			  let current = Math.floor(Math.random() * slides.length);
-			  slides[current].classList.add("active");
+				  let current = Math.floor(Math.random() * slides.length);
 
-			  function showSlide(index) {
-				slides.forEach(s => s.classList.remove("active"));
-				slides[index].classList.add("active");
-			  }
+				  // Create dots
+				  slides.forEach((_, i) => {
+					const dot = document.createElement("button");
+					dot.addEventListener("click", () => goToSlide(i));
+					dotsContainer.appendChild(dot);
+				  });
+				  const dots = dotsContainer.querySelectorAll("button");
 
-			  function nextSlide() {
-				current = (current + 1) % slides.length;
-				showSlide(current);
-			  }
+				  function showSlide(index) {
+					slides.forEach((s, i) => s.classList.toggle("active", i === index));
+					dots.forEach((d, i) => d.classList.toggle("active", i === index));
+				  }
 
-			  function prevSlide() {
-				current = (current - 1 + slides.length) % slides.length;
-				showSlide(current);
-			  }
+				  function nextSlide() {
+					current = (current + 1) % slides.length;
+					showSlide(current);
+				  }
 
-			  nextBtn.addEventListener("click", nextSlide);
-			  prevBtn.addEventListener("click", prevSlide);
+				  function prevSlide() {
+					current = (current - 1 + slides.length) % slides.length;
+					showSlide(current);
+				  }
 
-			  // auto-rotate every 25 seconds
-			  let timer = setInterval(nextSlide, 25000);
+				  function goToSlide(index) {
+					current = index;
+					showSlide(current);
+				  }
 
-			  // pause on hover
-			  const slider = document.querySelector(".testimonials-slider");
-			  slider.addEventListener("mouseenter", () => clearInterval(timer));
-			  slider.addEventListener("mouseleave", () => timer = setInterval(nextSlide, 25000));
-			});
-			</script>
+				  // Initialize
+				  showSlide(current);
+
+				  // Events
+				  nextBtn.addEventListener("click", nextSlide);
+				  prevBtn.addEventListener("click", prevSlide);
+
+				  // Auto rotate
+				  let timer = setInterval(nextSlide, 25000);
+				  const slider = document.querySelector(".testimonials-slider");
+				  slider.addEventListener("mouseenter", () => clearInterval(timer));
+				  slider.addEventListener("mouseleave", () => timer = setInterval(nextSlide, 25000));
+				});
+				</script>
 			
 		</head>
 		<body>
