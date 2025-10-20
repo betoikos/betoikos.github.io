@@ -313,7 +313,10 @@ ul.posts li {
     }
 }
 
-
+/* Mobile tweaks */
+@media (max-width: 600px) {
+    .quote-text { font-size: 1em; }
+}
 
 
 /* University of Illinois (blue) */
@@ -328,6 +331,52 @@ ul.posts li {
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+/* ========== Student Testimonials ========== */
+.testimonials {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 1.2em;
+    margin-top: 1.5em;
+}
+
+.quote-card {
+    border-left: 6px solid var(--accent, #3059ba);
+    border-radius: 10px;
+    background: #fff;
+    padding: 1em 1.2em;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    transition: transform 0.1s ease-in-out, box-shadow 0.2s;
+}
+
+.quote-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+}
+
+.quote-text {
+    font-style: italic;
+    font-size: 1.1em;
+    color: #333;
+    line-height: 1.5em;
+    margin: 0 0 0.6em 0;
+}
+
+.quote-meta {
+    font-size: 0.95em;
+    color: #555;
+    text-align: right;
+}
 
 
 
