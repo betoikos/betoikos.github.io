@@ -335,75 +335,97 @@ ul.posts li {
 
 
 
-
-/* ==== Testimonials Slider ==== */
+/* ==== Testimonials Slider (Compact Layout) ==== */
 .testimonials-slider {
   position: relative;
   max-width: 850px;
-  margin: 2em auto;
+  margin: 1.5em auto 2em;
   overflow: hidden;
   background: #fff;
   border-radius: 10px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  padding: 2em 2.2em;
-  min-height: 180px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  padding: 1.2em 2em;
+  min-height: auto; /* remove fixed height */
 }
 
 .quote-slide {
   display: none;
-  animation: fadeIn 0.8s ease-in-out;
+  animation: fadeIn 0.6s ease-in-out;
 }
 
 .quote-slide.active {
   display: block;
 }
 
+.quote-slide {
+  border-left: 5px solid var(--accent, #3059ba);
+  padding-left: 1.2em;
+  margin: 0;
+}
+
+/* Quote text + inline course info */
 .quote-text {
   font-style: italic;
-  font-size: 1.2em;
+  font-size: 1.15em;
   color: #333;
-  line-height: 1.6em;
-  margin-bottom: 0.6em;
+  line-height: 1.55em;
+  display: inline;
 }
 
 .quote-meta {
+  display: inline;
   font-size: 0.95em;
   color: #555;
-  text-align: right;
+  font-weight: 500;
+  margin-left: 0.6em;
 }
 
-/* Nav buttons */
+/* Remove extra white space inside slider */
+.testimonials-slider p {
+  margin: 0;
+}
+
+/* === Larger, side-spanning rectangular nav zones === */
 .quote-nav {
   position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background: rgba(48,89,186,0.9);
-  color: #fff;
+  top: 0;
+  bottom: 0;
+  width: 80px; /* wider clickable zone */
+  background: rgba(48,89,186,0.07);
+  color: #3059ba;
   border: none;
-  font-size: 1.6em;
-  padding: 0.2em 0.5em;
-  border-radius: 50%;
+  font-size: 2em;
   cursor: pointer;
-  transition: background 0.2s ease;
+  transition: background 0.2s ease, color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 5;
 }
 
 .quote-nav:hover {
-  background: #1f3991;
+  background: rgba(48,89,186,0.15);
+  color: #1f3991;
 }
 
-.quote-nav.prev { left: 10px; }
-.quote-nav.next { right: 10px; }
+.quote-nav.prev { left: 0; border-radius: 10px 0 0 10px; }
+.quote-nav.next { right: 0; border-radius: 0 10px 10px 0; }
 
-/* Fade animation */
+/* Adjust fade animation */
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from { opacity: 0; transform: translateY(3px); }
+  to   { opacity: 1; transform: translateY(0); }
 }
 
-
-/* Optional: colored accent bar on left */
-.quote-slide {
-  border-left: 6px solid var(--accent, #3059ba);
-  padding-left: 1.2em;
+@media (max-width: 600px) {
+  .testimonials-slider {
+    padding: 1em 1.4em;
+  }
+  .quote-text {
+    font-size: 1.05em;
+  }
+  .quote-nav {
+    width: 50px;
+    font-size: 1.6em;
+  }
 }
-
