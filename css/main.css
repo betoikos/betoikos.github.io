@@ -212,110 +212,6 @@ ul.posts li {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ========== Teaching Cards ========== */
-
-.teaching-card {
-    --accent: #3059ba;               /* default; overridden per school below */
-    border: 1px solid #e6e6e6;
-    border-left: 6px solid var(--accent);
-    border-radius: 10px;
-    padding: 1.0em 1.1em;
-    margin: 1em 0 1.2em;
-    background: #fff;
-}
-
-.tc-header {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      "title school"
-      "role  school"
-      "terms school";
-    gap: 0.15em 1em;
-    align-items: baseline;
-    margin-bottom: 0.6em;
-}
-
-.tc-title { grid-area: title; margin: 0; font-size: 1.35em; color: #333; font-weight: 700; }
-.tc-role  { grid-area: role;  font-style: italic; color: #555; }
-.tc-terms { grid-area: terms; color: #444; }
-.tc-school{ grid-area: school; color: var(--accent); font-weight: 700; white-space: nowrap; }
-
-.tc-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-}
-
-/* Buttons (re-uses your site’s button look, but with per-school accents) */
-.btn {
-    display: inline-block;
-    padding: 0.48em 0.85em;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: transform 0.02s ease-in-out, background 0.2s ease, border-color 0.2s ease;
-    font-weight: 600;
-    line-height: 1;
-}
-
-.btn-eval {
-    background: var(--accent);
-    color: #fff;
-    border: 1px solid var(--accent);
-}
-.btn-eval:hover {
-    background: color-mix(in srgb, var(--accent) 85%, black);
-    border-color: color-mix(in srgb, var(--accent) 85%, black);
-    transform: translateY(-1px);
-    text-decoration: none;
-}
-
-/* “Ghost” style for syllabus to keep hierarchy clear */
-.btn-syllabus {
-    background: #fff;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-}
-.btn-syllabus:hover {
-    background: color-mix(in srgb, var(--accent) 8%, white);
-    text-decoration: none;
-}
-
-/* Responsive: stack nicely */
-@media (max-width: 720px) {
-    .tc-header {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "title"
-          "school"
-          "role"
-          "terms";
-        gap: 0.15em 0;
-    }
-}
-
-/* Mobile tweaks */
-@media (max-width: 600px) {
-    .quote-text { font-size: 1em; }
 }
 
 
@@ -342,41 +238,52 @@ ul.posts li {
 
 
 
-/* ========== Student Testimonials ========== */
-.testimonials {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 1.2em;
-    margin-top: 1.5em;
+/* ========== Testimonials (Horizontal Flow) ========== */
+.testimonials-vertical {
+    max-width: 850px;
+    margin: 1.5em auto 2.5em;
 }
 
-.quote-card {
+.quote-block {
     border-left: 6px solid var(--accent, #3059ba);
-    border-radius: 10px;
+    padding: 1em 1.5em;
+    margin-bottom: 1.5em;
     background: #fff;
-    padding: 1em 1.2em;
-    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    transition: transform 0.1s ease-in-out, box-shadow 0.2s;
-}
-
-.quote-card:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 .quote-text {
     font-style: italic;
-    font-size: 1.1em;
+    font-size: 1.2em;
     color: #333;
-    line-height: 1.5em;
-    margin: 0 0 0.6em 0;
+    line-height: 1.6em;
+    margin-bottom: 0.5em;
 }
 
 .quote-meta {
-    font-size: 0.95em;
+    font-size: 1em;
+    font-weight: 500;
     color: #555;
     text-align: right;
 }
 
+/* Add thin divider line between blocks (optional) */
+.quote-block:not(:last-child)::after {
+    content: "";
+    display: block;
+    border-bottom: 1px solid #eee;
+    margin-top: 1em;
+}
+
+@media (max-width: 600px) {
+    .quote-text {
+        font-size: 1.05em;
+        line-height: 1.5em;
+    }
+    .testimonials-vertical {
+        padding: 0 0.5em;
+    }
+}
 
 
