@@ -44,13 +44,13 @@
 			  nextBtn.addEventListener("click", nextSlide);
 			  prevBtn.addEventListener("click", prevSlide);
 
-			  // auto-rotate every 7 seconds
-			  let timer = setInterval(nextSlide, 7000);
+			  // auto-rotate every 25 seconds
+			  let timer = setInterval(nextSlide, 25000);
 
 			  // pause on hover
 			  const slider = document.querySelector(".testimonials-slider");
 			  slider.addEventListener("mouseenter", () => clearInterval(timer));
-			  slider.addEventListener("mouseleave", () => timer = setInterval(nextSlide, 7000));
+			  slider.addEventListener("mouseleave", () => timer = setInterval(nextSlide, 25000));
 			});
 			</script>
 			
