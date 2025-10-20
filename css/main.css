@@ -444,3 +444,29 @@ ul.posts li {
     font-size: 1.05em;
   }
 }
+
+
+
+
+
+
+
+.quote-text {
+  display: inline;
+  font-style: italic;
+  font-size: 1.15em;
+  color: #333;
+  line-height: 1.55em;
+  text-align: justify;
+  margin: 0;
+  white-space: normal; /* allow wrapping naturally */
+}
+
+.quote-meta {
+  display: inline;
+  font-style: normal;
+  font-size: 0.95em;
+  color: #555;
+  font-weight: 500;
+  margin-left: 0.4em;
+}
