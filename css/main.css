@@ -470,3 +470,43 @@ ul.posts li {
   font-weight: 500;
   margin-left: 0.4em;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Prominent red for key calls-to-action (CV + email) */
+a.highlight-link {
+  color: #c62828;              /* red */
+  text-decoration: underline;  /* make it feel actionable */
+  font-weight: 700;            /* reinforce prominence */
+}
+
+a.highlight-link:hover,
+a.highlight-link:focus {
+  color: #8e0000;              /* darker on hover/focus */
+  text-decoration: underline;
+}
+
+a.highlight-link:visited {
+  color: #a61e1e;              /* accessible visited state */
+}
