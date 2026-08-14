@@ -1,0 +1,90 @@
+Media Briefing · EEA-ESEM 2026
+
+One banking panic, two Fed responses—and labor-market differences still visible a decade later
+==========================================================================================
+
+Can a central bank's response to a banking crisis affect local labor markets many years later? I study a rare natural experiment in 1930 Mississippi, where the same banking panic met two very different Federal Reserve responses. The Atlanta Fed expanded credit to the banking system, while the St. Louis Fed contracted it. Ten years later, I still find important differences in unemployment, labor-force participation, and reliance on public emergency work across the two sides of the district boundary. At the same time, when I follow the people who originally lived there, most of these differences become much smaller, in part because people on the more negatively affected St. Louis side were more likely to move.
+
+Paper: Places and People Under Heterogeneous Federal Reserve Policy
+Author: Humberto Martínez-García, El Colegio de México
+Conference: EEA-ESEM 2026, Dublin
+Paper status: Working paper
+Paper: Download the working paper (https://humbertomg.com/files/jmp.pdf)
+Media contact: hmartinez@colmex.mx
+
+WHY THIS MATTERS
+----------------
+
+We know that monetary policy can affect the aggregate economy and unemployment in the short run. It is much harder to know whether those effects can affect local labor markets many years later. One reason is simple: monetary policy normally applies to an entire country at the same time, so we rarely observe similar places receiving different policy responses to the same shock.
+
+Mississippi in 1930 provides an unusual exception.
+
+Following the collapse of Caldwell & Company, one of the largest financial conglomerates in the South, bank failures increased dramatically across the region. At that time Mississippi was divided between the Atlanta and St. Louis Federal Reserve districts, and the two districts had very different views about how to respond to a banking panic.
+
+The Atlanta Fed took a more interventionist approach and expanded credit to the banking system. The St. Louis Fed did the opposite and contracted its credit supply.
+
+This created a rare natural experiment. Places that were geographically very close, and that looked similar before the crisis, were exposed to sharply different Federal Reserve policies simply because they were located on different sides of the district boundary. This allows me to study not only what happened to banks during the panic, but more importantly what happened to local labor markets and workers ten years later.
+
+KEY FINDINGS
+------------
+
+* Local labor markets were still different ten years later. In 1940, residents on the Atlanta side were about 2 percentage points less likely to be unemployed. They were also less likely to rely on public emergency jobs.
+* The effects are much smaller when I follow people instead of places. For individuals who lived near the Federal Reserve boundary in 1930 most of the differences found across local labor markets become considerably smaller or disappear. Still, people originally on the Atlanta side were about 1 percentage point less likely to be unemployed in 1940.
+* Migration helps reconcile what happened to places and people. People originally on the St. Louis side were 5 percentage points more likely to leave their county and 2 percentage points more likely to leave Mississippi by 1940. These results suggest that migration was an important way in which people responded to the more negative shock on the St. Louis side.
+
+WHAT THE STUDY DOES
+-------------------
+
+The paper combines historical bank-level information that I collected from the Rand McNally Bankers' Directories with individual-level information from the complete 1930 and 1940 U.S. Censuses.
+
+The key feature of the research design is the boundary between the Atlanta and St. Louis Federal Reserve districts in Mississippi. I focus on a relatively narrow area around this boundary and show that, before the banking panic, the two sides looked very similar in terms of banking conditions, labor-market outcomes, and other economic characteristics.
+
+I use a data-driven procedure to determine how far from the boundary this comparison remains credible. The resulting area extends approximately 67 kilometres, or 42 miles, on each side of the boundary.
+
+Within this area, the only relevant difference after the Caldwell collapse was the Federal Reserve policy to which each side was exposed.
+
+The historical bank data allow me to study the immediate effect on bank failures. I then use the full-count Census to study what happened to local labor markets ten years later. Finally, by linking individuals between the 1930 and 1940 Censuses, I can follow people who originally lived near the boundary even if they subsequently moved somewhere else in the United States.
+
+This last step is what allows me to distinguish between what happened to places and what happened to people.
+
+PLACES VERSUS PEOPLE
+--------------------
+
+This distinction is one of the main points of the paper.
+
+When I study places, I ask what happened to people living in the local labor markets on the two sides of the boundary in 1940. Here I find substantial differences in unemployment, labor-force participation, reliance on public emergency work, and weeks worked.
+
+But this does not necessarily tell us what happened to the people who actually experienced the original shock in 1930. Some of them may have left those places.
+
+I therefore also study people by following individuals who lived near the boundary in 1930 to wherever they were living ten years later. Once I do this, most of the differences become considerably smaller. The unemployment difference remains, but it is much smaller relative to the average unemployment rate than the corresponding difference across places.
+
+Importantly, migration itself was different across the two sides. People originally on the St. Louis side were more likely to leave both their county and the state.
+
+Thus, these results point to a simple way of reconciling the place and people effects: migration. While local economies cannot move when they are hit by a negative shock, people can.
+
+WHAT THE FINDINGS MEAN TODAY
+----------------------------
+
+Even though the Federal Reserve of 1930 was very different from the Federal Reserve today, and the magnitude of these estimates should not be directly applied to current monetary policy, the main lesson is clearly captured by a quote in the paper:
+
+“For today’s policymakers, the main lesson is clear: in the face of sudden disruptions to the banking system, monetary contraction can generate long-term damage on local labor markets and workers, unless offset by active monetary interventions.”
+— Humberto Martínez-García, El Colegio de México
+
+PAPER AND CONFERENCE INFORMATION
+--------------------------------
+
+Paper: Places and People Under Heterogeneous Federal Reserve Policy
+Author: Humberto Martínez-García, El Colegio de México
+Paper status: Working paper
+
+Conference: EEA-ESEM 2026, Dublin
+Date: Tuesday, 18 August 2026
+Session: 11:00–12:30 — Heterogeneity, Distributional Effects, and Regions (EEA)
+Field: Macroeconomics
+Room: OC L2.16
+Session chair: Joseph Kopecky
+
+Media contact: hmartinez@colmex.mx
+Paper: Download the working paper (https://humbertomg.com/files/jmp.pdf)
+
+Web version: https://humbertomg.com/research/places-people-fed/media/
