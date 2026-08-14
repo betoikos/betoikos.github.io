@@ -5,63 +5,90 @@ permalink: /research/places-people-fed/media/
 ---
 
 <style>
+  /*
+   * This page intentionally overrides the site's usual content width.
+   * The rules are scoped to this page except for .container, whose width
+   * is widened here because the default site container is too narrow for
+   * a long-form media briefing on large screens.
+   */
+
+  body > .container {
+    width: 92vw !important;
+    max-width: 1320px !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+
   .media-briefing {
-    max-width: 880px;
+    width: 100%;
+    max-width: 1120px;
     margin: 0 auto;
-    line-height: 1.65;
+    font-size: 18px;
+    line-height: 1.62;
+  }
+
+  .media-briefing p,
+  .media-briefing li,
+  .media-briefing .media-meta,
+  .media-briefing .media-footer {
+    font-size: 1rem;
   }
 
   .media-briefing .media-kicker {
-    margin-bottom: 0.35rem;
-    font-size: 0.95rem;
+    margin: 0 0 0.45rem 0;
+    font-size: 0.82rem;
     font-weight: 600;
-    letter-spacing: 0.04em;
+    letter-spacing: 0.055em;
     text-transform: uppercase;
     opacity: 0.72;
   }
 
   .media-briefing .media-headline {
-    margin-top: 0;
-    margin-bottom: 0.85rem;
-    line-height: 1.15;
+    margin: 0 0 0.9rem 0;
+    font-size: clamp(2.05rem, 3vw, 3.05rem);
+    line-height: 1.08;
   }
 
   .media-briefing .media-deck {
-    margin-top: 0;
-    margin-bottom: 1.8rem;
-    font-size: 1.15rem;
+    margin: 0 0 1.7rem 0;
+    font-size: 1.08rem;
     line-height: 1.55;
   }
 
   .media-briefing .media-meta {
-    margin: 1.5rem 0 2rem 0;
-    padding: 1rem 1.15rem;
+    margin: 1.4rem 0 2rem 0;
+    padding: 1rem 1.2rem;
     border-left: 4px solid #7f3255;
     background: rgba(127, 50, 85, 0.06);
   }
 
   .media-briefing .media-meta p {
-    margin: 0.3rem 0;
+    margin: 0.28rem 0;
   }
 
   .media-briefing h2 {
-    margin-top: 2.1rem;
-    margin-bottom: 0.65rem;
+    margin-top: 2.15rem;
+    margin-bottom: 0.7rem;
+    font-size: clamp(1.55rem, 2vw, 1.9rem);
+    line-height: 1.2;
   }
 
   .media-briefing ul {
-    padding-left: 1.3rem;
+    padding-left: 1.35rem;
+    margin-top: 0.8rem;
   }
 
   .media-briefing li {
-    margin-bottom: 0.85rem;
+    margin-bottom: 0.9rem;
+    line-height: 1.58;
   }
 
   .media-briefing .author-quote {
     margin: 1.25rem 0;
     padding: 1rem 1.25rem;
     border-left: 4px solid #7f3255;
-    font-size: 1.05rem;
+    font-size: 1.02rem;
+    line-height: 1.58;
   }
 
   .media-briefing .author-quote p {
@@ -69,18 +96,38 @@ permalink: /research/places-people-fed/media/
   }
 
   .media-briefing .media-footer {
-    margin-top: 2.5rem;
-    padding-top: 1.25rem;
+    margin-top: 2.7rem;
+    padding-top: 1.35rem;
     border-top: 1px solid #d8d8d8;
   }
 
-  .media-briefing .media-footer p {
-    margin: 0.35rem 0;
+  .media-briefing .media-footer h2 {
+    margin-top: 0;
   }
 
-  @media (max-width: 700px) {
+  .media-briefing .media-footer p {
+    margin: 0.32rem 0;
+  }
+
+  .media-briefing a {
+    overflow-wrap: anywhere;
+  }
+
+  @media (max-width: 760px) {
+    body > .container {
+      width: 94vw !important;
+    }
+
+    .media-briefing {
+      font-size: 16.5px;
+    }
+
+    .media-briefing .media-headline {
+      font-size: 2rem;
+    }
+
     .media-briefing .media-deck {
-      font-size: 1.05rem;
+      font-size: 1.03rem;
     }
   }
 </style>
@@ -97,11 +144,11 @@ permalink: /research/places-people-fed/media/
 
   <div class="media-meta">
     <p><strong>Paper:</strong> <em>Places and People Under Heterogeneous Federal Reserve Policy</em></p>
-    <p><strong>Author:</strong> Humberto Martinez-Garcia, University of Illinois</p>
+    <p><strong>Author:</strong> Humberto Martínez-García, El Colegio de México</p>
     <p><strong>Conference:</strong> EEA-ESEM 2026, Dublin</p>
     <p><strong>Paper status:</strong> Working paper</p>
     <p><strong>Paper:</strong> <a href="/files/jmp.pdf">Download the working paper</a></p>
-    <p><strong>Media contact:</strong> <a href="mailto:hm18@illinois.edu">hm18@illinois.edu</a></p>
+    <p><strong>Media contact:</strong> <a href="mailto:hmartinez@colmex.mx">hmartinez@colmex.mx</a></p>
   </div>
 
   <h2>Why this matters</h2>
@@ -247,17 +294,29 @@ permalink: /research/places-people-fed/media/
     <p>
       “What makes this episode useful is that we have places that were very close to each other and were hit by the same banking panic, but received very different Federal Reserve responses. I find that the more active response reduced permanent bank failures and that differences in local labor markets were still present ten years later. But when I follow the people who originally lived there, most of those differences become much smaller. Migration appears to be an important part of the reason why.”
     </p>
-    <footer>— Humberto Martinez-Garcia, University of Illinois</footer>
+    <footer>— Humberto Martínez-García, El Colegio de México</footer>
   </blockquote>
 
   <div class="media-footer">
     <h2>Paper and conference information</h2>
+
     <p><strong>Paper:</strong> <em>Places and People Under Heterogeneous Federal Reserve Policy</em></p>
-    <p><strong>Author:</strong> Humberto Martinez-Garcia, University of Illinois</p>
+    <p><strong>Author:</strong> Humberto Martínez-García, El Colegio de México</p>
     <p><strong>Paper status:</strong> Working paper</p>
+
+    <br>
+
     <p><strong>Conference:</strong> EEA-ESEM 2026, Dublin</p>
-    <p><strong>Media contact:</strong> <a href="mailto:hm18@illinois.edu">hm18@illinois.edu</a></p>
-    <p><strong>Working paper:</strong> <a href="/files/jmp.pdf">/files/jmp.pdf</a></p>
+    <p><strong>Date:</strong> Monday, 17 August 2026</p>
+    <p><strong>Session:</strong> 16:00–17:30 — <em>Heterogeneity, Distributional Effects, and Regions (EEA)</em></p>
+    <p><strong>Field:</strong> Macroeconomics</p>
+    <p><strong>Room:</strong> OC L2.16</p>
+    <p><strong>Session chair:</strong> Joseph Kopecky</p>
+
+    <br>
+
+    <p><strong>Media contact:</strong> <a href="mailto:hmartinez@colmex.mx">hmartinez@colmex.mx</a></p>
+    <p><strong>Paper:</strong> <a href="/files/jmp.pdf">Download the working paper</a></p>
   </div>
 
 </article>
