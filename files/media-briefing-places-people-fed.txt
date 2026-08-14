@@ -3,7 +3,7 @@ Media Briefing · EEA-ESEM 2026
 One banking panic, two Fed responses—and labor-market differences still visible a decade later
 ==========================================================================================
 
-Can a central bank's response to a banking crisis affect local labor markets many years later? I study a rare natural experiment in 1930 Mississippi, where the same banking panic met two very different Federal Reserve responses. The Atlanta Fed expanded credit to the banking system, while the St. Louis Fed contracted it. Ten years later, I still find important differences in unemployment, labor-force participation, and reliance on public emergency work across the two sides of the district boundary. At the same time, when I follow the people who originally lived there, most of these differences become much smaller, in part because people on the more negatively affected St. Louis side were more likely to move.
+Can a central bank's policy affect local labor markets many years later? I study a rare natural experiment in 1930 Mississippi, where the same banking panic met two very different Federal Reserve policy responses. The Atlanta Fed expanded credit to the banking system, while the St. Louis Fed contracted it. Ten years later, I still find important differences in unemployment, labor-force participation, and reliance on public emergency work across the two sides of the district boundary. At the same time, when I follow the people who originally lived there, most of these differences become much smaller, in part because people on the more negatively affected St. Louis side were more likely to move.
 
 Paper: Places and People Under Heterogeneous Federal Reserve Policy
 Author: Humberto Martínez-García, El Colegio de México
