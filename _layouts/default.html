@@ -1,41 +1,51 @@
 <!DOCTYPE html>
-	<html>
-		<head>
-			<!-- Google tag (gtag.js) -->
-			<script async src="https://www.googletagmanager.com/gtag/js?id=G-N94NCBMVFR"></script>
-			<script>
-			  window.dataLayer = window.dataLayer || [];
-			  function gtag(){dataLayer.push(arguments);}
-			  gtag('js', new Date());
+<html lang="en">
+<head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-N94NCBMVFR"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-N94NCBMVFR');
+  </script>
 
-			  gtag('config', 'G-N94NCBMVFR');
-			</script>
-			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<link rel="stylesheet" type="text/css" href="/css/main.css">
-		</head>
-		<body>
-			<nav>
-	    		<ul >
-	        		<li><a href="/" class="mainNav">About</a></li>
-					<li><a href="/research" class="mainNav">Research</a></li>
-					<li><a href="/teaching" class="mainNav">Teaching</a></li>
-		        	<!--<li><a href="/about" class="mainNav">About</a></li>
-	        		<li><a href="/cv" class="mainNav">CV</a></li>
-	        		<li><a href="/blog" class="mainNav">Blog</a></li> -->
-                    
-	    		</ul>
-			</nav>
-			<div class="container">
-			
-			{{ content }}
-			
-			</div><!-- /.container -->
-			<footer>
-	    		<ul>
-	        		<li><a href="" class="mainFoot">hmartinez[at]colmex[dot]mx</a></li>
-	        		<li><a href="http://humbertomg.com" class="mainFoot">Home</a></li>
-				</ul>
-			</footer>
-		</body>
-	</html>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Humberto Martinez-Garcia, Assistant Professor of Economics at El Colegio de México.">
+  <title>{{ page.title }}</title>
+
+  <link rel="stylesheet" type="text/css" href="{{ '/css/main.css' | relative_url }}">
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="site-header-inner">
+      <a class="site-brand" href="{{ '/' | relative_url }}">Humberto Martinez-Garcia</a>
+
+      <nav class="site-nav" aria-label="Primary navigation">
+        <a href="{{ '/' | relative_url }}" class="mainNav{% if page.url == '/' %} active{% endif %}">About</a>
+        <a href="{{ '/research/' | relative_url }}" class="mainNav{% if page.url contains '/research' %} active{% endif %}">Research</a>
+        <a href="{{ '/teaching/' | relative_url }}" class="mainNav{% if page.url contains '/teaching' %} active{% endif %}">Teaching</a>
+        <a href="{{ '/files/cv.pdf' | relative_url }}" class="mainNav">CV</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="site-main">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-inner">
+      <span>Humberto Martinez-Garcia</span>
+      <div class="footer-links">
+        <a href="mailto:hmartinez@colmex.mx">hmartinez@colmex.mx</a>
+        <a href="{{ '/' | relative_url }}">Home</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

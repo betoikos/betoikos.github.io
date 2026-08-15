@@ -1,353 +1,410 @@
-body {
-    margin: 60px auto;
-    width: 70%;
-}
-nav ul, footer ul {
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
-    padding: 0px;
-    list-style: none;
-    font-weight: bold;
-}
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
-}
-a {
-    text-decoration: none;
-    color: #999;
-}
-a:hover {
-    text-decoration: underline;
-    color: #2F487D;
+/* =========================================================
+   Humberto Martinez-Garcia — academic website
+   First visual redesign
+   ========================================================= */
+
+:root {
+  --bg: #fbfaf7;
+  --surface: #ffffff;
+  --header-bg: #f2f3ed;
+  --ink: #26322d;
+  --text: #39433f;
+  --muted: #6a736e;
+  --soft: #8c948f;
+  --line: #d7dbd4;
+  --line-dark: #bdc4bc;
+  --wine: #7f3255;
+  --wine-dark: #642640;
+  --wine-soft: #f3e9ee;
+  --max-width: 1120px;
+  --serif: Georgia, "Times New Roman", Times, serif;
+  --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  --mono: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
 }
 
-h1, h2, h3, h4, h5, h6 {
-    color: #2F487D;
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--wine);
+  text-decoration: none;
+  text-underline-offset: 0.16em;
+}
+
+a:hover,
+a:focus {
+  color: var(--wine-dark);
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--wine);
+  outline-offset: 3px;
+}
+
+/* ---------- Header ---------- */
+
+.site-header {
+  background: var(--header-bg);
+  border-bottom: 1px solid var(--line);
+}
+
+.site-header-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  min-height: 82px;
+  padding: 0 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.site-brand {
+  color: var(--ink);
+  font-size: 1.08rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+  white-space: nowrap;
+}
+
+.site-brand:hover {
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 2.15rem;
+}
+
+.mainNav {
+  position: relative;
+  color: var(--ink);
+  font-size: 0.98rem;
+  font-weight: 450;
+  padding: 0.4rem 0;
+}
+
+.mainNav:hover {
+  color: var(--wine);
+  text-decoration: none;
+}
+
+.mainNav.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.15rem;
+  height: 1px;
+  background: var(--wine);
+}
+
+/* ---------- Main layout ---------- */
+
+.site-main {
+  min-height: calc(100vh - 170px);
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 4.4rem 2rem 6rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--ink);
+  margin-top: 0;
+}
+
+h1,
+h2 {
+  font-family: var(--serif);
+  font-weight: 500;
+  letter-spacing: -0.025em;
 }
 
 h1 {
-    font-size: 3em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+  font-size: clamp(2.7rem, 5vw, 4.25rem);
+  line-height: 1.02;
+  margin-bottom: 2.2rem;
 }
+
 h2 {
-    font-size: 2.5em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+  font-size: clamp(2rem, 3.3vw, 2.7rem);
+  line-height: 1.15;
+  margin: 4.8rem 0 1.8rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--line-dark);
 }
+
 h3 {
-    font-size: 2em;
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
+  font-size: 1.2rem;
+  line-height: 1.35;
+  font-weight: 650;
 }
+
 p {
-    font-size: 1.5em;
-    line-height: 1.4em;
-    color: #333;
-}
-footer {
-    border-top: 1px solid #d5d5d5;
-    font-size: .8em;
-    background-color: #2F487D;
-    text-align: center;
+  margin: 0 0 1.2rem;
+  color: var(--text);
 }
 
-ul.posts { 
-    margin: 20px auto 40px; 
-    font-size: 1.5em;
+ul {
+  color: var(--text);
 }
 
-ul.posts li {
-    list-style: none;
+/* ---------- Homepage ---------- */
+
+.home-hero {
+  display: grid;
+  grid-template-columns: minmax(240px, 315px) minmax(0, 1fr);
+  gap: clamp(2.5rem, 6vw, 5rem);
+  align-items: start;
+  padding-top: 0.5rem;
 }
 
-#myName {
-    color: #2F487D;
-}
-
-.mainFoot {
-    color: #fff;
-    vertical-align: center;
+.home-photo-wrap {
+  padding-top: 1.3rem;
 }
 
 #mainPhoto {
-    border-radius: 5%;
-    height: 400px;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  object-position: 50% 40%;
+  border-radius: 1px;
+  box-shadow: 0 0 0 1px rgba(38, 50, 45, 0.08);
 }
 
-
-/* Match list text to <p> size only inside #myTeaching */
-#myTeaching ul {
-    font-size: 1.5em;     /* same as p */
-    line-height: 1.4em;
-    color: #333;
-    margin-top: 0.5em;
-    margin-bottom: 1em;
-    padding-left: 1.2em;  /* optional: tighter indent */
+.home-intro {
+  padding-top: 0.75rem;
 }
 
-#myTeaching li {
-    font-size: 1em;       /* inherit parent size; do NOT rescale */
-    line-height: inherit; 
-    margin-bottom: 0.4em;
+.eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--wine);
+  font-family: var(--mono);
+  font-size: 0.74rem;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
 }
 
+.home-hero #myName {
+  margin: 0 0 1.15rem;
+  font-size: clamp(3.25rem, 6vw, 5rem);
+}
 
+.position {
+  color: var(--muted);
+  font-size: 1.08rem;
+  line-height: 1.5;
+  margin-bottom: 1.7rem;
+}
 
+.position a {
+  color: var(--muted);
+}
 
+.home-summary {
+  max-width: 700px;
+  font-size: 1.02rem;
+}
 
- /* RESEARCH SECTION */
+.home-summary p {
+  margin-bottom: 1rem;
+}
 
+.home-actions {
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
 
-/* Research cards */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 0.72rem 1.1rem;
+  border: 1px solid transparent;
+  border-radius: 0;
+  font-size: 0.9rem;
+  font-weight: 600;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.btn-primary,
+.btn-download {
+  background: var(--wine);
+  border-color: var(--wine);
+  color: #fff;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-download:hover,
+.btn-download:focus {
+  background: var(--wine-dark);
+  border-color: var(--wine-dark);
+  color: #fff;
+  text-decoration: none;
+}
+
+.home-email {
+  color: var(--muted);
+  font-family: var(--mono);
+  font-size: 0.8rem;
+}
+
+.home-links {
+  margin-top: 1.8rem;
+  padding-top: 1.1rem;
+  border-top: 1px solid var(--line);
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 0.88rem;
+}
+
+.home-links a {
+  color: var(--muted);
+}
+
+.home-links .text-link {
+  color: var(--wine-dark);
+  font-family: var(--mono);
+  letter-spacing: 0.02em;
+}
+
+/* ---------- Research ---------- */
+
 .paper-card {
-    border: 1px solid #e6e6e6;
-    border-radius: 8px;
-    padding: 1.0em 1.2em;
-    margin: 1em 0 1.2em;
-    background: #fff;
+  margin: 0;
+  padding: 1.8rem 0 2rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.paper-card:first-of-type {
+  border-top: 1px solid var(--line);
+}
+
+.paper-content {
+  display: block;
+}
+
+.paper-text {
+  min-width: 0;
 }
 
 .paper-title {
-    margin: 0 0 0.1em 0;
-    font-size: 1.4em; /* sits nicely under your h2 */
-    color: #333;      /* unified heading color */
-    font-weight: 700;
+  color: var(--ink);
+  font-size: 1.12rem;
+  line-height: 1.45;
+  font-weight: 650;
+  margin: 0 0 0.28rem;
 }
 
 .paper-meta {
-    margin: 0 0 0.6em 0;
-    font-size: 0.95em;
-    color: #666;
-    font-style: italic;
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-style: italic;
+  margin: 0 0 0.8rem;
+}
+
+.paper-meta a {
+  color: var(--muted);
 }
 
 .paper-abstract {
-    margin: 0 0 0.8em 0;
-    font-size: 1.1em;         /* slightly larger than body for readability */
-    line-height: 1.55em;
-    color: #333;
+  max-width: 950px;
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0 0 1rem;
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 0.5em 0.9em;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: transform 0.02s ease-in-out, background 0.2s ease, border-color 0.2s ease;
-    font-weight: 600;
-    line-height: 1;
+.paper-card .btn-download {
+  min-height: auto;
+  padding: 0;
+  background: transparent;
+  border: 0;
+  color: var(--wine);
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.02em;
 }
 
-.btn-download {
-    background: #3059ba;
-    color: #fff;
-    border: 1px solid #3059ba;
+.paper-card .btn-download::after {
+  content: "  →";
 }
 
-.btn-download:hover {
-    background: #1f3991;
-    border-color: #1f3991;
-    text-decoration: none;
-    transform: translateY(-1px);
+.paper-card .btn-download:hover,
+.paper-card .btn-download:focus {
+  background: transparent;
+  color: var(--wine-dark);
+  text-decoration: underline;
 }
 
-/* Make lists on the research page read well if used inside cards */
-.paper-card ul, .paper-card li {
-    font-size: 1em;
-    line-height: 1.5em;
-    color: #333;
-}
-
-/* Responsive tweak for narrow screens */
-@media (max-width: 680px) {
-    .paper-title { font-size: 1.25em; }
-    .paper-abstract { font-size: 1.05em; }
-}
-
-
-
-/* Layout container */
-.paper-content {
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-    gap: 1.5em;
-    flex-wrap: wrap; /* allows wrapping for narrow screens */
-}
-
-/* Left text section */
-.paper-text {
-    flex: 1 1 60%;
-    min-width: 280px;
-}
-
-/* Right image section */
 .paper-image {
-    flex: 0 0 35%;
-    max-width: 300px;
-    text-align: right;
+  margin-top: 1.2rem;
+  max-width: 380px;
 }
 
 .paper-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    border: 1px solid #ddd;
+  width: 100%;
+  border: 1px solid var(--line);
 }
 
-/* Responsive stacking for small screens */
-@media (max-width: 720px) {
-    .paper-content {
-        flex-direction: column;
-    }
-    .paper-image {
-        max-width: 100%;
-        text-align: center;
-        margin-top: 1em;
-    }
-}
+/* ---------- Teaching ---------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* ========== Teaching Cards ========== */
-
-.teaching-card {
-    --accent: #3059ba;               /* default; overridden per school below */
-    border: 1px solid #e6e6e6;
-    border-left: 6px solid var(--accent);
-    border-radius: 10px;
-    padding: 1.0em 1.1em;
-    margin: 1em 0 1.2em;
-    background: #fff;
-}
-
-.tc-header {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    grid-template-areas:
-      "title school"
-      "role  school"
-      "terms school";
-    gap: 0.15em 1em;
-    align-items: baseline;
-    margin-bottom: 0.6em;
-}
-
-.tc-title { grid-area: title; margin: 0; font-size: 1.35em; color: #333; font-weight: 700; }
-.tc-role  { grid-area: role;  font-style: italic; color: #555; }
-.tc-terms { grid-area: terms; color: #444; }
-.tc-school{ grid-area: school; color: var(--accent); font-weight: 700; white-space: nowrap; }
-
-.tc-actions {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.5em;
-}
-
-/* Buttons (re-uses your site’s button look, but with per-school accents) */
-.btn {
-    display: inline-block;
-    padding: 0.48em 0.85em;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: transform 0.02s ease-in-out, background 0.2s ease, border-color 0.2s ease;
-    font-weight: 600;
-    line-height: 1;
-}
-
-.btn-eval {
-    background: var(--accent);
-    color: #fff;
-    border: 1px solid var(--accent);
-}
-.btn-eval:hover {
-    background: color-mix(in srgb, var(--accent) 85%, black);
-    border-color: color-mix(in srgb, var(--accent) 85%, black);
-    transform: translateY(-1px);
-    text-decoration: none;
-}
-
-/* “Ghost” style for syllabus to keep hierarchy clear */
-.btn-syllabus {
-    background: #fff;
-    color: var(--accent);
-    border: 1px solid var(--accent);
-}
-.btn-syllabus:hover {
-    background: color-mix(in srgb, var(--accent) 8%, white);
-    text-decoration: none;
-}
-
-/* Responsive: stack nicely */
-@media (max-width: 720px) {
-    .tc-header {
-        grid-template-columns: 1fr;
-        grid-template-areas:
-          "title"
-          "school"
-          "role"
-          "terms";
-        gap: 0.15em 0;
-    }
-}
-
-/* Mobile tweaks */
-@media (max-width: 600px) {
-    .quote-text { font-size: 1em; }
-}
-
-
-/* University of Illinois (blue) */
-.school-illinois { --accent: #dd781c; }
-
-/* El Colegio de México (green) */
-.school-colmex { --accent: rgba(106, 15, 44, 0.94); }
-
-/* Add more schools here */
-.school-unam     { --accent: #203d8e; }  /* example */
-.school-uiuc-alt { --accent: #13294B; }  /* darker Illinois blue, if desired */
-
-
-
-
-
-/* ==== Testimonials Slider (Refined Version) ==== */
 .testimonials-slider {
   position: relative;
-  max-width: 95%;
-  margin: 1.5em auto;
+  max-width: 100%;
+  margin: 0 0 4.3rem;
+  padding: 1.8rem 4.4rem 2.2rem;
   overflow: hidden;
-  background: #fff;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-  padding: 1.2em 4em; /* extra horizontal padding for side panels */
+  background: transparent;
+  border-top: 1px solid var(--line-dark);
+  border-bottom: 1px solid var(--line-dark);
 }
 
 .quote-slide {
   display: none;
-  animation: fadeIn 0.6s ease-in-out;
+  animation: fadeIn 0.45s ease-in-out;
 }
 
 .quote-slide.active {
@@ -355,158 +412,362 @@ ul.posts li {
 }
 
 .quote-text {
+  display: inline;
+  color: var(--text);
+  font-family: var(--serif);
+  font-size: 1.04rem;
   font-style: italic;
-  font-size: 1.15em;
-  color: #333;
-  line-height: 1.55em;
+  line-height: 1.7;
   margin: 0;
-  text-align: justify;
 }
 
 .quote-meta {
   display: inline;
+  color: var(--muted);
+  font-family: var(--sans);
+  font-size: 0.78rem;
   font-style: normal;
-  font-size: 0.95em;
-  color: #555;
   font-weight: 500;
-  margin-left: 0.5em;
+  margin-left: 0.45rem;
+  white-space: nowrap;
 }
 
-/* Nav panels – rectangular, full height, non-overlapping */
 .quote-nav {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 60px;
-  background: rgba(48, 89, 186, 0.08);
-  color: #3059ba;
-  border: none;
-  font-size: 2em;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 34px;
+  height: 34px;
+  padding: 0;
+  border: 1px solid var(--line-dark);
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--wine);
+  font-size: 1rem;
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: background 0.2s ease, color 0.2s ease;
-  z-index: 5;
 }
 
 .quote-nav:hover {
-  background: rgba(48, 89, 186, 0.18);
-  color: #1f3991;
+  background: var(--wine-soft);
+  border-color: var(--wine);
 }
 
 .quote-nav.prev {
-  left: 0;
-  border-radius: 10px 0 0 10px;
+  left: 0.25rem;
 }
 
 .quote-nav.next {
-  right: 0;
-  border-radius: 0 10px 10px 0;
+  right: 0.25rem;
 }
 
-/* Dots for navigation */
 .quote-dots {
+  margin-top: 1.25rem;
   text-align: center;
-  margin-top: 1em;
 }
 
 .quote-dots button {
-  width: 12px;
-  height: 12px;
-  border-radius: 50%;
-  border: 1px solid #3059ba;
-  background: #fff;
+  width: 7px;
+  height: 7px;
+  padding: 0;
   margin: 0 4px;
+  border: 1px solid var(--line-dark);
+  border-radius: 50%;
+  background: transparent;
   cursor: pointer;
-  transition: all 0.2s ease;
 }
 
 .quote-dots button.active {
-  background: #3059ba;
+  background: var(--wine);
+  border-color: var(--wine);
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(4px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-/* Adjust for small screens */
-@media (max-width: 700px) {
-  .testimonials-slider {
-    padding: 1em 2em;
-  }
-  .quote-nav {
-    width: 50px;
-    font-size: 1.6em;
-  }
-  .quote-text {
-    font-size: 1.05em;
-  }
-}
-
-
-
-
-
-
-
-.quote-text {
-  display: inline;
-  font-style: italic;
-  font-size: 1.15em;
-  color: #333;
-  line-height: 1.55em;
-  text-align: justify;
+.teaching-card {
   margin: 0;
-  white-space: normal; /* allow wrapping naturally */
+  padding: 1.3rem 0 1.45rem;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid var(--line);
 }
 
-.quote-meta {
-  display: inline;
-  font-style: normal;
-  font-size: 0.95em;
-  color: #555;
+.teaching-card:first-of-type {
+  border-top: 1px solid var(--line);
+}
+
+.tc-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-areas:
+    "title school"
+    "role  school"
+    "terms school";
+  column-gap: 2rem;
+  row-gap: 0.08rem;
+  align-items: baseline;
+  margin: 0;
+}
+
+.tc-title {
+  grid-area: title;
+  margin: 0;
+  color: var(--ink);
+  font-size: 1.06rem;
+  line-height: 1.4;
+  font-weight: 650;
+}
+
+.tc-role {
+  grid-area: role;
+  color: var(--muted);
+  font-family: var(--serif);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.tc-terms {
+  grid-area: terms;
+  color: var(--muted);
+  font-size: 0.82rem;
+}
+
+.tc-school {
+  grid-area: school;
+  color: var(--soft);
+  font-size: 0.78rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.tc-actions {
+  margin-top: 0.6rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.tc-actions .btn {
+  min-height: 34px;
+  padding: 0.45rem 0.7rem;
+  font-size: 0.78rem;
+  background: transparent;
+  color: var(--wine);
+  border-color: var(--wine);
+}
+
+#myTeachingGraduate,
+#myTeachingUndergrad,
+#myTeachingGraduateCOLMEX,
+#myTeachingUndergradCOLMEX,
+#myTeachingUndergradUNAM {
+  margin: 2.4rem 0 0.7rem;
+  color: var(--wine-dark);
+  font-family: var(--mono);
+  font-size: 0.82rem;
   font-weight: 500;
-  margin-left: 0.4em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
+/* ---------- Generic post/list support ---------- */
 
+.meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+}
 
+.post {
+  max-width: 820px;
+  font-family: var(--serif);
+}
 
+ul.posts {
+  margin: 1rem 0 2rem;
+  padding: 0;
+  list-style: none;
+}
 
+ul.posts li {
+  padding: 0.8rem 0;
+  border-bottom: 1px solid var(--line);
+}
 
+/* ---------- Footer ---------- */
 
+.site-footer {
+  border-top: 1px solid var(--line);
+  background: transparent;
+}
 
+.site-footer-inner {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  min-height: 88px;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  color: var(--soft);
+  font-size: 0.78rem;
+}
 
+.footer-links {
+  display: flex;
+  gap: 1.4rem;
+}
 
+.footer-links a {
+  color: var(--soft);
+}
 
+/* ---------- Legacy highlight links ---------- */
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* Prominent red for key calls-to-action (CV + email) */
 a.highlight-link {
-  color: #c62828;              /* red */
-  text-decoration: underline;  /* make it feel actionable */
-  font-weight: 700;            /* reinforce prominence */
+  color: var(--wine);
+  text-decoration: underline;
+  font-weight: 600;
 }
 
 a.highlight-link:hover,
-a.highlight-link:focus {
-  color: #8e0000;              /* darker on hover/focus */
-  text-decoration: underline;
+a.highlight-link:focus,
+a.highlight-link:visited {
+  color: var(--wine-dark);
 }
 
-a.highlight-link:visited {
-  color: #a61e1e;              /* accessible visited state */
+/* ---------- Responsive ---------- */
+
+@media (max-width: 820px) {
+  .site-header-inner {
+    min-height: auto;
+    padding-top: 1.1rem;
+    padding-bottom: 1.1rem;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .site-nav {
+    width: 100%;
+    gap: 1.35rem;
+    overflow-x: auto;
+    padding-bottom: 0.1rem;
+  }
+
+  .container {
+    padding-top: 3rem;
+  }
+
+  .home-hero {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .home-photo-wrap {
+    width: min(330px, 80vw);
+    padding-top: 0;
+  }
+
+  #mainPhoto {
+    aspect-ratio: 4 / 4.8;
+  }
+
+  .home-intro {
+    padding-top: 0;
+  }
+
+  .home-hero #myName {
+    font-size: clamp(3rem, 12vw, 4.5rem);
+  }
+
+  .tc-header {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "title"
+      "school"
+      "role"
+      "terms";
+    gap: 0.12rem;
+  }
+
+  .tc-school {
+    margin-top: 0.15rem;
+  }
+}
+
+@media (max-width: 600px) {
+  body {
+    font-size: 16px;
+  }
+
+  .site-header-inner,
+  .container,
+  .site-footer-inner {
+    padding-left: 1.2rem;
+    padding-right: 1.2rem;
+  }
+
+  .site-brand {
+    font-size: 1rem;
+  }
+
+  .site-nav {
+    gap: 1.1rem;
+  }
+
+  .mainNav {
+    font-size: 0.9rem;
+  }
+
+  .container {
+    padding-top: 2.5rem;
+    padding-bottom: 4rem;
+  }
+
+  h2 {
+    margin-top: 3.6rem;
+  }
+
+  .home-photo-wrap {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .home-actions,
+  .home-links {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .testimonials-slider {
+    padding: 1.5rem 2.7rem 1.8rem;
+  }
+
+  .quote-text {
+    font-size: 0.98rem;
+  }
+
+  .quote-nav {
+    width: 30px;
+    height: 30px;
+  }
+
+  .site-footer-inner {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(3px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
