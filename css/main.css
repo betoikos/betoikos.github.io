@@ -4,18 +4,25 @@
    ========================================================= */
 
 :root {
-  --bg: #fbfaf7;
+  /* Institutional-inspired palette:
+     COLMEX wine + CEE blue, on a clean white/neutral base. */
+  --bg: #ffffff;
   --surface: #ffffff;
-  --header-bg: #f2f3ed;
-  --ink: #26322d;
-  --text: #39433f;
-  --muted: #6a736e;
-  --soft: #8c948f;
-  --line: #d7dbd4;
-  --line-dark: #bdc4bc;
-  --wine: #7f3255;
-  --wine-dark: #642640;
-  --wine-soft: #f3e9ee;
+  --header-bg: #ffffff;
+  --ink: #242424;
+  --text: #3d3d3d;
+  --muted: #707070;
+  --soft: #929292;
+  --line: #e4e2de;
+  --line-dark: #cbc7c1;
+
+  --wine: #76163f;
+  --wine-dark: #5c1030;
+  --wine-soft: #f7eef2;
+
+  --cee-blue: #005b89;
+  --cee-blue-dark: #00466b;
+  --cee-blue-soft: #edf5f9;
   --max-width: 1120px;
   --serif: Georgia, "Times New Roman", Times, serif;
   --sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
@@ -67,6 +74,7 @@ button:focus-visible {
 
 .site-header {
   background: var(--header-bg);
+  border-top: 4px solid var(--wine);
   border-bottom: 1px solid var(--line);
 }
 
@@ -82,15 +90,15 @@ button:focus-visible {
 }
 
 .site-brand {
-  color: var(--ink);
+  color: var(--wine-dark);
   font-size: 1.08rem;
-  font-weight: 500;
+  font-weight: 550;
   letter-spacing: -0.01em;
   white-space: nowrap;
 }
 
 .site-brand:hover {
-  color: var(--ink);
+  color: var(--wine);
   text-decoration: none;
 }
 
@@ -119,8 +127,8 @@ button:focus-visible {
   left: 0;
   right: 0;
   bottom: -0.15rem;
-  height: 1px;
-  background: var(--wine);
+  height: 2px;
+  background: var(--cee-blue);
 }
 
 /* ---------- Main layout ---------- */
@@ -159,11 +167,26 @@ h1 {
 }
 
 h2 {
+  position: relative;
   font-size: clamp(2rem, 3.3vw, 2.7rem);
   line-height: 1.15;
   margin: 4.8rem 0 1.8rem;
-  padding-bottom: 0.75rem;
-  border-bottom: 1px solid var(--line-dark);
+  padding-bottom: 0.82rem;
+  border-bottom: 1px solid var(--line);
+}
+
+h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -1px;
+  width: 58px;
+  height: 3px;
+  background: linear-gradient(
+    to right,
+    var(--wine) 0 62%,
+    var(--cee-blue) 62% 100%
+  );
 }
 
 h3 {
@@ -181,6 +204,27 @@ ul {
   color: var(--text);
 }
 
+
+/* ---------- Institutional identity accents ---------- */
+
+#myName {
+  position: relative;
+  color: var(--ink);
+}
+
+#myName::after {
+  content: "";
+  display: block;
+  width: 76px;
+  height: 4px;
+  margin-top: 0.55rem;
+  background: linear-gradient(
+    to right,
+    var(--wine) 0 70%,
+    var(--cee-blue) 70% 100%
+  );
+}
+
 /* ---------- Homepage ---------- */
 
 .home-hero {
@@ -192,16 +236,42 @@ ul {
 }
 
 .home-photo-wrap {
+  position: relative;
   padding-top: 1.3rem;
+  padding-left: 10px;
+  padding-bottom: 10px;
+}
+
+.home-photo-wrap::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.7rem;
+  width: 3px;
+  height: calc(100% - 0.7rem);
+  background: var(--wine);
+}
+
+.home-photo-wrap::after {
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: -8px;
+  bottom: 0;
+  height: 3px;
+  background: var(--cee-blue);
+  z-index: 0;
 }
 
 #mainPhoto {
+  position: relative;
+  z-index: 1;
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
   object-position: 50% 40%;
-  border-radius: 1px;
-  box-shadow: 0 0 0 1px rgba(38, 50, 45, 0.08);
+  border-radius: 0;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.07);
 }
 
 .home-intro {
@@ -210,7 +280,7 @@ ul {
 
 .eyebrow {
   margin: 0 0 0.7rem;
-  color: var(--wine);
+  color: var(--cee-blue);
   font-family: var(--mono);
   font-size: 0.74rem;
   letter-spacing: 0.17em;
@@ -302,7 +372,7 @@ ul {
 }
 
 .home-links .text-link {
-  color: var(--wine-dark);
+  color: var(--cee-blue-dark);
   font-family: var(--mono);
   letter-spacing: 0.02em;
 }
@@ -362,7 +432,7 @@ ul {
   padding: 0;
   background: transparent;
   border: 0;
-  color: var(--wine);
+  color: var(--cee-blue);
   font-family: var(--mono);
   font-size: 0.78rem;
   letter-spacing: 0.02em;
@@ -375,7 +445,7 @@ ul {
 .paper-card .btn-download:hover,
 .paper-card .btn-download:focus {
   background: transparent;
-  color: var(--wine-dark);
+  color: var(--cee-blue-dark);
   text-decoration: underline;
 }
 
@@ -442,7 +512,7 @@ ul {
   border: 1px solid var(--line-dark);
   border-radius: 50%;
   background: var(--bg);
-  color: var(--wine);
+  color: var(--cee-blue);
   font-size: 1rem;
   cursor: pointer;
   display: flex;
@@ -451,8 +521,8 @@ ul {
 }
 
 .quote-nav:hover {
-  background: var(--wine-soft);
-  border-color: var(--wine);
+  background: var(--cee-blue-soft);
+  border-color: var(--cee-blue);
 }
 
 .quote-nav.prev {
@@ -480,8 +550,8 @@ ul {
 }
 
 .quote-dots button.active {
-  background: var(--wine);
-  border-color: var(--wine);
+  background: var(--cee-blue);
+  border-color: var(--cee-blue);
 }
 
 .teaching-card {
@@ -596,8 +666,8 @@ ul.posts li {
 /* ---------- Footer ---------- */
 
 .site-footer {
-  border-top: 1px solid var(--line);
-  background: transparent;
+  border-top: 3px solid var(--wine);
+  background: #faf9f7;
 }
 
 .site-footer-inner {
@@ -769,5 +839,21 @@ a.highlight-link:visited {
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+.home-hero #myName::after {
+  content: none !important;
+}
+
+@media (max-width: 820px) {
+  .home-photo-wrap {
+    padding-left: 8px;
+    padding-bottom: 8px;
+  }
+
+  .home-photo-wrap::after {
+    left: 8px;
+    right: -6px;
   }
 }
